@@ -13,7 +13,8 @@ exports["default"] = (function (_a) {
             switch (elementPointer.type) {
                 case 'SECTION_HEADER': {
                     var sectionData = data[sectionIndex].data;
-                    offset += getSectionHeaderHeight(sectionIndex);
+                    const finalHeight = data?.[sectionIndex]?.headerHeight || getSectionHeaderHeight(sectionIndex)
+                    offset += finalHeight;
                     // If this section is empty, we go right to the footer...
                     if (sectionData.length === 0) {
                         elementPointer = { type: 'SECTION_FOOTER' };
@@ -49,7 +50,8 @@ exports["default"] = (function (_a) {
         var length;
         switch (elementPointer.type) {
             case 'SECTION_HEADER':
-                length = getSectionHeaderHeight(sectionIndex);
+                const finalHeight = data?.[sectionIndex]?.headerHeight || getSectionHeaderHeight(sectionIndex)
+                length = finalHeight;
                 break;
             case 'ROW':
                 var rowIndex = elementPointer.index;
