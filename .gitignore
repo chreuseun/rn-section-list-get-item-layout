@@ -1,5 +1,5 @@
 node_modules
-yarn-error.log
-dist
-coverage
+# yarn-error.log
+# dist
+# coverage
 .DS_Store

@@ -1,6 +1,6 @@
-.gitignore
-tsconfig.json
-index.ts
-index.spec.js
-coverage
+# .gitignore
+# tsconfig.json
+# index.ts
+# index.spec.js
+# coverage
 .DS_Store
